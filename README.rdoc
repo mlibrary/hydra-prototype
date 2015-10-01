@@ -1,27 +1,28 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+HydraPrototype is a  ‘Hydra Head’, Fedora-backed digital repository application.As the name says, it is only for the purpose of prototyping and exploratory purposes.  The application will be using the gems that are already released and will include development on gems that are in projecthydra-labs. 
 
-Things you may want to cover:
+You can fork on master branch and clone on your local machine. 
 
-* Ruby version
+It is a work in progress..... 
 
-* System dependencies
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
+
+
+
+
+
+
+
+
+
 
 
 Please feel free to use a different markup language if you do not plan to run
