@@ -10,6 +10,7 @@ bundle exec rails s -p <portnumber>
 It is a work in progress..... 
 
 To submit a pull request:
+https://github.com/projecthydra/hydra-head/wiki/Git-Workflow
 
 
 
