@@ -6,7 +6,6 @@
 
 # Ignore bundler config.
 /.bundle
-!.bundle/ruby/2.2.0/gems/curation_concerns-0.1.0/config/locales/curation_concerns.en.yml
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
