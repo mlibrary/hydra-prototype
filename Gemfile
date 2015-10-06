@@ -41,6 +41,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # # Use Capistrano for deployment
 # # gem 'capistrano-rails', group: :development
 #
+
+group :development do
+  gem 'pry'
+end
+
  group :development, :test do
 #   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
      gem 'byebug'
@@ -58,15 +63,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
                        end
 #
 #
-                       gem 'rsolr', '~> 1.0.6'
-                       gem 'devise'
-                       gem 'devise-guests', '~> 0.3'
-                       group :development, :test do
-                         gem 'rspec-rails'
-                           gem 'jettywrapper'
-                           end
-#
-
+                       gem 'rsolr', '~> 1.0.6'    
 
 gem 'devise'
 gem 'devise-guests', '~> 0.3'
