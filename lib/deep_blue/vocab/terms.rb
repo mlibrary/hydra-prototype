@@ -49,6 +49,28 @@ module DeepBlue
         subPropertyOf: "dc:subject".freeze,
         type: "rdf:Property".freeze
 
+      property :abstract,
+        label: "Abstract".freeze,
+        subPropertyOf: "dc:description".freeze,
+        type: "rdf:Property".freeze
+
+      property :discipline,
+        label: "Discipline".freeze,
+        subPropertyOf: "dc:description".freeze,
+        type: "rdf:Property".freeze
+
+      property :degreeGrantor,
+        label: "Degree Grantor".freeze,
+        subPropertyOf: "dc:contributor".freeze,
+        type: "rdf:Property".freeze
+
+      property :committeeMember,
+        label: "Committee Member".freeze,
+        subPropertyOf: "dc:contributor".freeze,
+        type: "rdf:Property".freeze
+
+
+
     end
   end
 end
