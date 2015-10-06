@@ -2,7 +2,7 @@
 
 HydraPrototype is a  ‘Hydra Head’, Fedora-backed digital repository application.As the name says, it is only for the purpose of prototyping and exploratory purposes.  The application will be using the gems that are already released and will include development on gems that are in projecthydra-labs. 
 
-To contribute in the development, please follow the Github Workflow document on Wiki page
+To contribute in the development, please follow the Github Workflow document on Wiki page: https://github.com/mlibrary/hydra-prototype/wiki/Git-Workflow
 
 
 
