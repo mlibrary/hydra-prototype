@@ -72,6 +72,3 @@ group :development, :test do
   gem 'jettywrapper'
 end
 
-gem 'rsolr', '~> 1.0.6'
-group :development, :test do
-end
