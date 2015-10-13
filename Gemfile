@@ -43,7 +43,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #
 
 group :development do
-  gem 'pry'
+  gem 'pry-rails'
 end
 
  group :development, :test do
