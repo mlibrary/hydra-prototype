@@ -1,7 +1,7 @@
 development:
   user: fedoraAdmin
   password: fedoraAdmin
-  url: http://localhost:8080/fedora/rest
+  url: <%= ENV['FEDORA_URL'] || "http://localhost:8080/fedora/rest" %>
   base_path: /njaffer-dev
 test:
   user: fedoraAdmin
