@@ -1,6 +1,15 @@
 development:
   archivist:
     - archivist1@example.com
+  admin:
+    - harry@hogwarts.edu
+    - roger@umich.edu
+    - njaffer@umich.edu
+    - blancoj@umich.edu
+    - gordonl@umich.edu
+    - krenee@umich.edu
+    - khage@umich.edu
+    - jweise@umich.edu
 test:
   archivist:
     - archivist1@example.com
