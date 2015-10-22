@@ -4,8 +4,6 @@ module DeepBlue
 
     included do
 
-      property :dateAccessioned, predicate: DeepBlue::Vocab::Terms.dateAccessioned, multiple: false
-
       property :dateAvailable, predicate: DeepBlue::Vocab::Terms.dateAvailable, multiple: false
 
       property :dateIssued, predicate: DeepBlue::Vocab::Terms.dateIssued, multiple: false
