@@ -14,6 +14,11 @@ module DeepBlue
         subPropertyOf: "dc:date".freeze,
         type: "rdf:Property".freeze
 
+      property :dateIssuedYear,
+        label: "Date Issued Year".freeze,
+        subPropertyOf: "dc:date".freeze,
+        type: "rdf:Property".freeze
+
       property :citation,
         label: "Citation".freeze,
         subPropertyOf: "dc:identifier".freeze,
