@@ -11,16 +11,16 @@ en:
     institution:
       name: "MLibrary: University of Michigan Library"
       homepage_url: "http://www.lib.umich.edu"
-    product_name: "Hydra-Prototype Repository"
+    product_name: "MHydra Repository"
     search:
       form:
         q:
           label: "Search Repository"
-          placeholder: "Type keywords in here"
+          placeholder: "Search Keywords"
     work:
       editor:
         legend: "Content Editors"
-        caption: "Who should be able to make changes to this work?"
+        caption: "Who should be able to make changes to this item?"
     messages:
       success:
         single: "has been saved."
@@ -40,7 +40,7 @@ en:
     search:
       fields:
         facet:
-          human_readable_type_sim: Type of Work
+          human_readable_type_sim: Item Type
           creator_sim: Creator
           tag_sim: Keyword
           subject_sim: Subject
