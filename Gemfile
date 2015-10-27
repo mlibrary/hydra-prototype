@@ -44,6 +44,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development do
   gem 'pry-rails'
+  gem 'rubocop', require: false
 end
 
  group :development, :test do
