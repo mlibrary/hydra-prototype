@@ -49,6 +49,7 @@ en:
           publisher_sim: Publisher
           file_format_sim: Format
           generic_type_sim: Type
+          dateIssuedYear_sim: Date
         index:
           description_tesim: "Description"
           tag_tesim: "Keyword"
