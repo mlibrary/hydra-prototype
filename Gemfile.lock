@@ -100,12 +100,13 @@ GEM
     bootstrap-sass (3.3.5.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.3.0)
+    bootstrap_form (2.3.0)
     breadcrumbs_on_rails (2.3.1)
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
     cancancan (1.13.1)
-    childprocess (0.5.7)
+    childprocess (0.5.6)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.0)
     coffee-rails (4.1.0)
@@ -206,6 +207,10 @@ GEM
     hydra-pcdm (0.1.0)
       activefedora-aggregation (~> 0.4)
       mime-types (>= 1)
+    hydra-role-management (0.2.2)
+      blacklight
+      bootstrap_form
+      cancancan
     hydra-works (0.1.0)
       active-fedora (~> 9.2)
       activefedora-aggregation (~> 0.4)
@@ -515,9 +520,10 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   byebug
-  curation_concerns (= 0.1)
+  curation_concerns
   devise
   devise-guests (~> 0.3)
+  hydra-role-management
   jbuilder (~> 2.0)
   jettywrapper
   jquery-rails
@@ -543,6 +549,3 @@ DEPENDENCIES
   umichwrapper!
   warden
   web-console (~> 2.0)
-
-BUNDLED WITH
-   1.10.3

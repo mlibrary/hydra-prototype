@@ -9,6 +9,9 @@ gem 'responders'
 gem 'warden'
 gem 'bcrypt'
 gem 'thread_safe'
+
+gem 'hydra-role-management'
+
 #gem 'pry'
 ## Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
