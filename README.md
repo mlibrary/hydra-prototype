@@ -10,7 +10,7 @@ After cloning and running `bundle`:
 $ bundle exec rake db:migrate
 $ bundle exec rake prototype:install_sample_roles
 $ bundle exec rake prototype:install_superusers_group
-$ bundle exec rake prototype:install_superusers # same users, adds them to the superusers group
+$ bundle exec rake prototype:install_superusers # see rake task for sample users
 ```
 
 The installed roles are admin, collection.manager, collection.depositor.
