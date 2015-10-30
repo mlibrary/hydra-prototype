@@ -3,5 +3,14 @@
 class Item < ActiveFedora::Base
   include ::CurationConcerns::WorkBehavior
   include ::CurationConcerns::BasicMetadata
-  validates :title, presence: { message: 'Your work must have a title.' }
+  include ::DeepBlue::BasicMetadata
+  validates_presence_of :title,  message: 'Your work must have a title.'
+
+  def to_solr(solr_doc = {})
+    super(solr_doc).tap do |solr_doc|
+      solr_doc['dateIssuedYear_sim'] = dateIssued[0,4]
+    end
+  end
+
+  
 end
