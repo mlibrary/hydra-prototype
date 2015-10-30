@@ -21,9 +21,9 @@ class Ability
       can [:create], Collection
     end
 
-    if current_user.has_role?('collection.depositor') or current_user.has_group_role?('collection.depositor')
+    if current_user.has_role?('collection.depositor') or current_user.has_group_role?('collection.depositor') or current_user.admin?
       # can [:create, :show, :index, :edit, :update, :destroy], [ CurationConcerns.configuration.curation_concerns ]
-      can [:create], [ CurationConcerns.configuration.curation_concerns ]
+      can [:create], [ CurationConcerns.config.curation_concerns ]
       # can [:show], Collection
     end
 
