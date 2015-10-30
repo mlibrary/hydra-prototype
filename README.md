@@ -9,11 +9,14 @@ After cloning and running `bundle`:
 ```bash
 $ bundle exec rake db:migrate
 $ bundle exec rake prototype:install_sample_roles
-$ bundle exec rake prototype:install_superusers_group
+$ bundle exec rake prototype:install_sample_groups # defines superusers, managers, depositors
 $ bundle exec rake prototype:install_superusers # see rake task for sample users
+$ bundle exec rake prototype:install_sample_users
 ```
 
 The installed roles are admin, collection.manager, collection.depositor.
+
+The installed sample users are `admin@umich.edu`, `manager@umich.edu`, and `depositor@umich.edu`. They are added to the obvious groups ;-)
 
 After setup, you can do:
 
