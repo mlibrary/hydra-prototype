@@ -1,3 +1,12 @@
+CurationConcerns.configure do |config|
+  if File.exists?('/l/local/fits/fits-0.8.4/fits.sh')
+    config.fits_path = '/l/local/fits/fits-0.8.4/fits.sh'
+  elsif File.exists?('/usr/local/brew/bin/fits.sh')
+    config.fits_path = '/usr/local/brew/bin/fits.sh'
+  end
+end
+
+# NONE OF THIS ACTUALLY RUNS ANYMORE?
 CurationConcerns.config do |config|
   config.fits_to_desc_mapping = {
     file_title: :title,
