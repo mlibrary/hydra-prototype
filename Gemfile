@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'umichwrapper', github: 'mlibrary/umichwrapper', branch: 'master'
 
 #gem 'hydra'
-gem 'curation_concerns'
+gem 'curation_concerns', '0.2.0'
 gem 'orm_adapter'
 gem 'responders'
 gem 'warden'
