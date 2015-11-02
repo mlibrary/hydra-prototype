@@ -1,0 +1,18 @@
+  <%= @presenter.attribute_to_html(:description) %>
+  <%= @presenter.attribute_to_html(:abstract) %>
+  <%= @presenter.attribute_to_html(:creator, catalog_search_link: true ) %>
+  <%= @presenter.attribute_to_html(:contributor, label: 'Contributors', catalog_search_link: true) %>
+  <%= @presenter.attribute_to_html(:subject, catalog_search_link: true) %>
+  <%= @presenter.attribute_to_html(:classification) %>
+  <%= @presenter.attribute_to_html(:discipline) %>
+  <%= @presenter.attribute_to_html(:affiliationUMCampus) %>
+  <%= @presenter.attribute_to_html(:publisher) %>
+  <%= @presenter.attribute_to_html(:handleUrl) %>
+  <%= @presenter.attribute_to_html(:dateAvailable) %>
+  <%= @presenter.attribute_to_html(:dateIssued) %>
+  <%= @presenter.attribute_to_html(:degreeGrantor) %>
+  <%= @presenter.attribute_to_html(:committeeMember) %>
+  <%= @presenter.attribute_to_html(:hlbTopLevel) %>
+  <%= @presenter.attribute_to_html(:hlbSecondLevel) %>
+  <%= @presenter.attribute_to_html(:language) %>
+
