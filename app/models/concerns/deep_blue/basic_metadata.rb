@@ -8,9 +8,9 @@ module DeepBlue
 
       property :dateIssued, predicate: DeepBlue::Vocab::Terms.dateIssued, multiple: false 
 
-      property :dateIssuedYear, predicate: DeepBlue::Vocab::Terms.dateIssuedYear, multiple: false do |index|
-        index.as :stored_sortable, :facetable
-      end
+      # property :dateIssuedYear, predicate: DeepBlue::Vocab::Terms.dateIssuedYear, multiple: false do |index|
+      #   index.as :stored_sortable, :facetable
+      # end
 
       property :classification, predicate: DeepBlue::Vocab::Terms.classification, multiple: false
 
