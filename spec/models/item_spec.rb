@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 describe Item do
-  it "has tests" do
+  it "should have some tests" do
     skip "Add your tests here"
   end
 end
