@@ -66,6 +66,8 @@ en:
           human_readable_type_tesim: "Resource Type"
           format_tesim: "File Format"
           identifier_tesim: "Identifier"
+          date_uploaded_ssi: "Date Uploaded"
+          dateIssued_ssi: "Date Issued"
         show:
           title_tesim: "Title"
           description_tesim: "Description"
