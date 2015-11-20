@@ -4,6 +4,7 @@ class SolrDocument
   include Blacklight::Solr::Document
   # Adds CurationConcerns behaviors to the SolrDocument.
   include CurationConcerns::SolrDocumentBehavior
+  include DeepBlue::SolrDocumentBehavior
 
 
   # self.unique_key = 'id'
