@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   blacklight_for :catalog
   devise_for :users
   mount Hydra::Collections::Engine => '/'
@@ -7,6 +7,27 @@ Rails.application.routes.draw do
   resources :welcome, only: 'index'
   root to: 'welcome#index'
   curation_concerns_collections
+
+  scope module: 'deep_blue' do
+    resources :collections do
+      member do
+        get 'permissions' => 'collections#list_permissions'
+        post 'permissions' => 'collections#update_permissions'
+      end
+    end
+  end
+
+  # resources :collections, only: :show do
+  #   member do
+  #     get 'page/:page', action: :index
+  #     get 'facet/:id', action: :facet, as: :dashboard_facet
+  #   end
+  #   collection do
+  #     put '', action: :update
+  #     put :remove_member
+  #   end
+  # end
+
   curation_concerns_basic_routes
   curation_concerns_embargo_management
   # The priority is based upon order of creation: first created -> highest priority.
