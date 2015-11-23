@@ -1,0 +1,25 @@
+h1 #{@collection.title} Permissions
+
+form method="POST"
+  fieldset
+    legend Managers
+
+    = render partial: 'list_helper', locals: { permission: 'manage' }
+
+
+  fieldset
+    legend Depositors
+
+    = render partial: 'list_helper', locals: {permission: 'deposit'}
+
+  fieldset
+    legend Default Readers
+
+    = render partial: 'list_helper', locals: {permission: 'intended_reader'}
+
+  .form-group
+    input type="hidden" name="authenticity_token" value="#{form_authenticity_token}"
+    button.btn.btn-primary Save
+
+
+
