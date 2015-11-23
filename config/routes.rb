@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   curation_concerns_collections
   curation_concerns_basic_routes
   curation_concerns_embargo_management
+
+  get 'items/:id/permit' => 'items#permit', as: :permit_item
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
