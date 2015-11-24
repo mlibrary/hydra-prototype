@@ -17,28 +17,27 @@ Rails.application.routes.draw do
       end
     end
 
-    resources 'items' do
+    # resources 'items' do
+    #   member do
+    #     get 'permissions' => 'items#list_permissions'
+    #     post 'permissions' => 'items#update_permissions'
+    #   end
+    # end
+
+  end
+
+  curation_concerns_basic_routes
+  curation_concerns_embargo_management
+
+  namespace :curation_concerns, path: :concern do
+    resources :items do
       member do
         get 'permissions' => 'items#list_permissions'
         post 'permissions' => 'items#update_permissions'
       end
     end
-
   end
 
-  # resources :collections, only: :show do
-  #   member do
-  #     get 'page/:page', action: :index
-  #     get 'facet/:id', action: :facet, as: :dashboard_facet
-  #   end
-  #   collection do
-  #     put '', action: :update
-  #     put :remove_member
-  #   end
-  # end
-
-  curation_concerns_basic_routes
-  curation_concerns_embargo_management
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

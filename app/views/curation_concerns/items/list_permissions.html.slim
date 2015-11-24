@@ -1,0 +1,22 @@
+h1 #{@item.title} Permissions
+
+form method="POST"
+
+  fieldset
+    legend Edit
+
+    = render partial: 'list_helper', locals: {permission: 'edit'}
+
+  fieldset
+    legend Read
+
+    = render partial: 'list_helper', locals: {permission: 'read'}
+
+  fieldset
+    legend Discover
+
+    = render partial: 'list_helper', locals: {permission: 'discover'}
+
+  .form-group
+    input type="hidden" name="authenticity_token" value="#{form_authenticity_token}"
+    button.btn.btn-primary Save

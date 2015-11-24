@@ -18,7 +18,7 @@ module DeepBlue
 
       property :abstract, predicate: DeepBlue::Vocab::Terms.abstract, multiple: true do |index|
         index.type :text
-        index.as :stored
+        index.as :stored_searchable
       end
 
       property :discipline, predicate: DeepBlue::Vocab::Terms.discipline, multiple: true
