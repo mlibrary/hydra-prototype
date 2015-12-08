@@ -5,15 +5,21 @@ class CurationConcerns::ItemsController < ApplicationController
   include CurationConcerns::CurationConcernController
   set_curation_concern_type Item
 
-  before_action: :find_item
-  before_action: :check_edit_access
+  before_action :find_item
+  before_action :load_config
+  before_action :check_edit_access
 
   def permit
     render action: :show_permissions
   end
 
+  def load_config
+    @config = CollectionConfig.find_by_resource('--DEEPBLUE--')
+  end
+
   def find_item
-    @item = Items.find params[:id]
+    return unless params[:id]
+    @item = Item.find params[:id]
     if !@item
       redirect_to root_path
     end
@@ -21,10 +27,11 @@ class CurationConcerns::ItemsController < ApplicationController
   end
 
   def check_edit_access
-    @access = Ability.custompermissions
-    if !@access[can]].includes?[:edit] check_edit_access
-      redirect_to root_path
-    end
+    # @access = Ability.custom_permissions
+    # if !@access[can].includes?(:edit)
+    #   redirect_to root_path
+    # end
+    true
   end
 
   def list_permissions

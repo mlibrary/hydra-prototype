@@ -1,0 +1,36 @@
+<pre>AHOY THERE</pre>
+
+<%= simple_form_for [main_app, :curation_concerns, curation_concern],
+                    wrapper_mappings: { multifile: :horizontal_file_input } do |f| %>
+    <% if f.error_notification -%>
+        <div class="alert alert-danger fade in">
+          <strong>Wait don't go!</strong> There was a problem with your submission. Please review the errors below:
+          <a class="close" data-dismiss="alert" href="#">&times;</a>
+        </div>
+    <% end -%>
+
+    <% @config.field_configs.each do |field| %>
+        <pre><%= field.multiple %></pre>
+      <% case field.input_type %>
+      <% when "text" %>
+          <%= f.input field.property.to_sym, label: field.label, multiple: field.multiple, as: :multi_value %> <!-- , as: :multi_value -->
+      <% when "radio" %>
+          <%= f.input field.property.to_sym, as: :radio_buttons, collection: field.options %>
+      <% end %>
+    <% end %>
+
+    <!--<%= render 'form_descriptive_fields', f: f %>-->
+    <!--<%= render 'form_supplementary_fields', f: f %>-->
+
+    <div class="row">
+      <div class="col-md-12 form-actions">
+        <%= f.submit class: 'btn btn-primary require-contributor-agreement' %>
+        <%- if curation_concern.new_record? -%>
+            <%= link_to 'Cancel', main_app.root_path, class: 'btn btn-link' %>
+        <%- else -%>
+            <%= link_to 'Cancel', polymorphic_path([main_app, :curation_concerns, curation_concern]), class: 'btn btn-link' %>
+        <%- end -%>
+      </div>
+    </div>
+
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151029021907) do
+ActiveRecord::Schema.define(version: 20151208181521) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer  "user_id",       null: false
@@ -37,6 +37,34 @@ ActiveRecord::Schema.define(version: 20151029021907) do
   end
 
   add_index "checksum_audit_logs", ["file_set_id", "file_id"], name: "by_generic_file_id_and_file_id"
+
+  create_table "collection_configs", force: :cascade do |t|
+    t.string   "resource",                    null: false
+    t.boolean  "can_embargo", default: true
+    t.boolean  "can_lease",   default: true
+    t.boolean  "can_hide",    default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  add_index "collection_configs", ["resource"], name: "index_collection_configs_on_resource", unique: true
+
+  create_table "field_configs", force: :cascade do |t|
+    t.string   "property",                             null: false
+    t.string   "label",                                null: false
+    t.text     "help_text"
+    t.boolean  "hidden",               default: false
+    t.boolean  "required",             default: false
+    t.boolean  "multiple",             default: false
+    t.string   "input_type"
+    t.text     "options"
+    t.integer  "position"
+    t.integer  "collection_config_id",                 null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
+
+  add_index "field_configs", ["collection_config_id"], name: "index_field_configs_on_collection_config_id"
 
   create_table "groups", force: :cascade do |t|
     t.string "name"

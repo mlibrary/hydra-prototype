@@ -11,6 +11,7 @@ gem 'bcrypt'
 gem 'thread_safe'
 
 gem 'hydra-role-management'
+gem 'acts_as_list'
 
 #gem 'pry'
 ## Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
