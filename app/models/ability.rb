@@ -13,6 +13,7 @@ class Ability
       can [:discover], Hydra::AccessControls::Lease
       can [:create], [ CurationConcerns.config.curation_concerns ]
       can [:destroy], ActiveFedora::Base
+      can [:permissions], [ CurationConcerns.config.curation_concerns ]
     end
 
     # Limits deleting objects to a the admin user
@@ -38,4 +39,22 @@ class Ability
     #   can [:create], ActiveFedora::Base
     # end
   end
+
+  def curation_concerns_permissions
+    can [:list_permissions, :update_permissions, :edit, :update, :destroy], String do |id|
+      test_edit(id)
+    end
+
+    can [:list_permissions, :update_permissions, :edit, :update, :destroy], ActiveFedora::Base do |obj|
+      test_edit(obj.id)
+    end
+
+    can [:list_permissions, :update_permissions, :edit, :update, :destroy], SolrDocument do |obj|
+      cache.put(obj.id, obj)
+      test_edit(obj.id)
+    end
+  end
+
 end
+
+

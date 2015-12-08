@@ -16,7 +16,10 @@ module DeepBlue
 
       property :affiliationUMCampus, predicate: DeepBlue::Vocab::Terms.affiliationUMCampus, multiple: true
 
-      property :abstract, predicate: DeepBlue::Vocab::Terms.abstract, multiple: false
+      property :abstract, predicate: DeepBlue::Vocab::Terms.abstract, multiple: true do |index|
+        index.type :text
+        index.as :stored_searchable
+      end
 
       property :discipline, predicate: DeepBlue::Vocab::Terms.discipline, multiple: true
 

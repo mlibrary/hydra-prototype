@@ -3,6 +3,7 @@
 module CurationConcerns
   class ItemForm < CurationConcerns::Forms::WorkForm
     self.model_class = ::Item
+    self.terms += [:abstract]
   end
 end
 

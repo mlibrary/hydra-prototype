@@ -1,0 +1,12 @@
+.row
+  .col-md-6
+    .form-group
+      label Users
+      textarea.form-control name="#{permission}_users" rows="5"
+        = decomma(@collection.send("#{permission}_users_string"))
+
+  .col-md-6
+    .form-group
+      label Groups
+      textarea.form-control name="#{permission}_groups" rows="5"
+        = decomma(@collection.send("#{permission}_groups_string"))

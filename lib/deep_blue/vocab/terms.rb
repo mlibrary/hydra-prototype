@@ -50,7 +50,7 @@ module DeepBlue
         type: "rdf:Property".freeze
 
       property :abstract,
-        label: "Abstract".freeze,
+        label: "Ye Olde Abstract".freeze,
         subPropertyOf: "dc:description".freeze,
         type: "rdf:Property".freeze
 
