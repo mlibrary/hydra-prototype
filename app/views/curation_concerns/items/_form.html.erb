@@ -13,9 +13,11 @@
         <pre><%= field.multiple %></pre>
       <% case field.input_type %>
       <% when "text" %>
-          <%= f.input field.property.to_sym, label: field.label, multiple: field.multiple, as: :multi_value %> <!-- , as: :multi_value -->
+          <%= f.input field.property.to_sym, label: field.label, multiple: field.multiple, as: field.multiple ? :multi_value : :single_value %> <!-- , as: :multi_value -->
       <% when "radio" %>
           <%= f.input field.property.to_sym, as: :radio_buttons, collection: field.options %>
+      <% when "select" %>
+          <%= f.input field.property.to_sym, label: field.label, as: :select, collection: field.get_options, input_html: { multiple: field.multiple } %>
       <% end %>
     <% end %>
 
